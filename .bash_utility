@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+function copy-without-trailing-newline()
+{
+  tr -d "\n" | pbcopy
+}
+
+function copy-working-directory()
+{
+  echo "$PWD" | copy-without-trailing-newline
+}
+
+# shortcuts
+alias c="copy-without-trailing-newline"
+alias cwd="copy-working-directory"
